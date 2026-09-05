@@ -1,6 +1,3 @@
-import fs from "node:fs";
-import path from "node:path";
-import matter from "gray-matter";
 import eventsData from "@/content/events.json";
 import rosterData from "@/content/roster.json";
 
@@ -82,63 +79,7 @@ export function getRoster(): Roster {
   return { ...roster, players };
 }
 
-/* ---------------------------------- Posts --------------------------------- */
-
-export type Post = {
-  slug: string;
-  title: string;
-  /** YYYY-MM-DD */
-  date: string;
-  excerpt: string;
-  image?: string;
-  content: string;
-};
-
-const postsDir = path.join(process.cwd(), "content", "posts");
-
-export function getAllPosts(): Post[] {
-  if (!fs.existsSync(postsDir)) return [];
-  return fs
-    .readdirSync(postsDir)
-    .filter((f) => f.endsWith(".md"))
-    .map((file) => readPost(file.replace(/\.md$/, "")))
-    .filter((p): p is Post => p !== null)
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
-}
-
-export function getPostBySlug(slug: string): Post | null {
-  return readPost(slug);
-}
-
-function readPost(slug: string): Post | null {
-  const file = path.join(postsDir, `${slug}.md`);
-  if (!fs.existsSync(file)) return null;
-  const raw = fs.readFileSync(file, "utf8");
-  const { data, content } = matter(raw);
-  return {
-    slug,
-    title: String(data.title ?? slug),
-    date: String(data.date ?? ""),
-    excerpt: String(data.excerpt ?? ""),
-    image: data.image ? String(data.image) : undefined,
-    content,
-  };
-}
-
 /* -------------------------------- Formatting ------------------------------ */
-
-export function formatDate(iso: string, opts?: Intl.DateTimeFormatOptions) {
-  // Dates like "2026-09-01" (no time) are parsed as UTC; render them as such
-  // so the calendar day doesn't shift.
-  const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(iso);
-  return new Date(iso).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    ...(dateOnly ? { timeZone: "UTC" } : {}),
-    ...opts,
-  });
-}
 
 export function formatEventDate(e: ClubEvent) {
   const start = new Date(e.date);

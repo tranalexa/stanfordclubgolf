@@ -1,7 +1,14 @@
 {
   "season": "2026–2027",
   "blurb": "The competitive travel roster for the school year. Spots are earned through open tryouts at the start of each season — see the Tryouts page to submit scores.",
-  "officers": [],
+  "officers": [
+    { "name": "Alexa Tran", "role": "Co-President · Head of Social", "year": "Senior" },
+    { "name": "Matthew Chan", "role": "Co-President · Head of Competition", "year": "Senior" },
+    { "name": "Victoria Li", "role": "VP Social · Grad", "year": "Masters'" },
+    { "name": "William Liu", "role": "VP Social · Undergrad", "year": "Junior" },
+    { "name": "Neil Parasher", "role": "VP Membership", "year": "Masters'" },
+    { "name": "Theo Boris", "role": "Financial Officer", "year": "Junior" }
+  ],
   "players": [
     { "name": "Matthew Chan", "year": "Senior" },
     { "name": "Anya Parasher", "year": "Junior" },

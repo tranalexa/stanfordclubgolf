@@ -131,53 +131,6 @@ body {
   opacity: 0.7;
 }
 
-/* Markdown post body */
-.prose-club {
-  color: var(--color-ink);
-  line-height: 1.7;
-}
-.prose-club p {
-  margin: 0 0 1em;
-}
-.prose-club h2,
-.prose-club h3 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--color-cardinal);
-  margin: 1.6em 0 0.5em;
-  line-height: 1.2;
-}
-.prose-club h2 {
-  font-size: 1.5rem;
-}
-.prose-club h3 {
-  font-size: 1.2rem;
-}
-.prose-club ul,
-.prose-club ol {
-  padding-left: 1.4em;
-  margin: 0 0 1em;
-}
-.prose-club ul {
-  list-style: disc;
-}
-.prose-club ol {
-  list-style: decimal;
-}
-.prose-club a {
-  color: var(--color-cardinal);
-  text-decoration: underline;
-}
-.prose-club blockquote {
-  border-left: 3px solid var(--color-cardinal);
-  padding-left: 1em;
-  color: var(--color-ink-muted);
-  margin: 0 0 1em;
-}
-.prose-club strong {
-  font-weight: 700;
-}
-
 /* ---------- Page view transitions ---------- */
 :root {
   --vt-exit: 160ms;

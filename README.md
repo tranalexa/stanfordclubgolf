@@ -7,12 +7,11 @@ Website for Stanford University's club golf team. Built with Next.js (App Router
 | Route | What it is |
 | --- | --- |
 | `/` | Home: hero photo plus tiles linking to About, Membership, Competitive Team, Schedule |
-| `/about` | Testimonials, About Us, team photo, Our Story |
+| `/about` | About Us, Our Story, team photo, leadership |
 | `/membership` | Join Us form (submits to Formspree) |
 | `/tryouts` | Competitive tryouts overview + scorecard Google Form |
 | `/team` | Competitive roster and upcoming NCCGA tournaments |
 | `/schedule` | Upcoming and past events with Add-to-Calendar |
-| `/news`, `/news/[slug]` | News posts written in Markdown |
 | `/contact` | Practice times, contact info, socials, map |
 
 ## Running locally
@@ -62,27 +61,12 @@ Everything below is a plain file edit followed by a commit. Vercel redeploys aut
 
 `content/about.ts`. Paragraphs for About Us and Our Story. Officers / leadership are edited in `content/roster.json` (`officers` array) and shown on the About page.
 
-### News posts
-
-Add a Markdown file to `content/posts/`. The filename becomes the URL slug.
-
-```md
----
-title: "Post title"
-date: "2026-09-01"
-excerpt: "One or two sentences shown in the list."
-image: "/images/some-photo.jpg"
----
-
-Post body in Markdown.
-```
-
 ### Photos
 
 Drop images into `public/images/` and reference them as `/images/filename.jpg`. The current files there are placeholders; replace them with real photos using the same filenames and nothing else needs to change:
 
 - `hero-home.jpg` (square-ish, the home page hero)
-- `hero-about.jpg`, `hero-membership.jpg`, `hero-team.jpg`, `hero-schedule.jpg`, `hero-news.jpg`, `hero-contact.jpg` (portrait, roughly 7:8)
+- `hero-about.jpg`, `hero-membership.jpg`, `hero-team.jpg`, `hero-schedule.jpg`, `hero-contact.jpg` (portrait, roughly 7:8)
 - `tile-about.jpg`, `tile-membership.jpg`, `tile-team.jpg`, `tile-schedule.jpg` (landscape, roughly 16:11)
 - `about-team.jpg` (team photo on the About page)
 
