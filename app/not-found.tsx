@@ -26,6 +26,7 @@ export default function NotFound() {
           <p className="mt-2 text-ink-muted">That page isn&apos;t on the course.</p>
           <Link
             href="/"
+            transitionTypes={["nav-back"]}
             className="mt-6 inline-block rounded-md bg-cardinal px-5 py-2.5 font-heading text-sm font-semibold text-white hover:bg-cardinal-dark"
           >
             Back to the clubhouse

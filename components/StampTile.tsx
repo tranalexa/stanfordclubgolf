@@ -12,7 +12,11 @@ type Props = {
 /** Photo tile with a serrated postage-stamp edge, used in the home grid. */
 export default function StampTile({ href, image, alt, label }: Props) {
   return (
-    <Link href={href} className="group block h-full min-h-0">
+    <Link
+      href={href}
+      transitionTypes={["nav-forward"]}
+      className="group block h-full min-h-0"
+    >
       <div className="stamp h-full transition-transform duration-300 group-hover:-translate-y-1">
         <div className="relative aspect-[16/11] w-full overflow-hidden desktop:aspect-auto desktop:h-full">
           <Image

@@ -31,7 +31,10 @@ export default function PillNav() {
 
   return (
     <>
-      <div className="fixed left-6 top-6 z-50 tablet:left-8 tablet:top-8 desktop:left-9 desktop:top-9">
+      <div
+        className="fixed left-6 top-6 z-50 tablet:left-8 tablet:top-8 desktop:left-9 desktop:top-9"
+        style={{ viewTransitionName: "site-nav" }}
+      >
         <div className="flex flex-col items-center gap-2 rounded-xl bg-cardinal-dark p-1.5 shadow-lg shadow-black/25 ring-1 ring-white/10">
           <button
             type="button"
@@ -46,6 +49,7 @@ export default function PillNav() {
           <Link
             href="/"
             onClick={close}
+            transitionTypes={["nav-back"]}
             aria-label={`${site.name} home`}
             className="grid h-9 w-9 place-items-center rounded-lg transition hover:bg-white/10"
           >
@@ -82,6 +86,9 @@ export default function PillNav() {
                     <Link
                       href={item.href}
                       onClick={close}
+                      transitionTypes={
+                        item.href === "/" ? ["nav-back"] : ["nav-forward"]
+                      }
                       className={`group flex items-baseline gap-4 py-1 font-display text-[2.6rem] leading-none text-cardinal tablet:text-[3.6rem] ${
                         active ? "" : "opacity-75 hover:opacity-100"
                       }`}

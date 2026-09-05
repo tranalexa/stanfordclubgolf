@@ -40,6 +40,7 @@ export const site = {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/membership", label: "Membership" },
+    { href: "/tryouts", label: "Tryouts" },
     { href: "/team", label: "Competitive Team" },
     { href: "/schedule", label: "Schedule" },
     { href: "/news", label: "News" },

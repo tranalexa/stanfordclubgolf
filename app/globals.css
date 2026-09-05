@@ -177,3 +177,67 @@ body {
 .prose-club strong {
   font-weight: 700;
 }
+
+/* ---------- Page view transitions ---------- */
+:root {
+  --vt-exit: 160ms;
+  --vt-enter: 280ms;
+  --vt-move: 380ms;
+}
+
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(.page-exit) {
+  animation:
+    var(--vt-exit) ease-out both page-fade reverse,
+    var(--vt-exit) ease-out both page-rise reverse;
+}
+
+::view-transition-new(.page-enter) {
+  animation:
+    var(--vt-enter) ease-out var(--vt-exit) both page-fade,
+    var(--vt-move) cubic-bezier(0.22, 1, 0.36, 1) both page-rise;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes page-rise {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Keep the floating pill nav fixed while pages crossfade */
+::view-transition-group(site-nav) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-nav) {
+  display: none;
+}
+::view-transition-new(site-nav) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}

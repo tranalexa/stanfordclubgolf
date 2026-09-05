@@ -5,7 +5,11 @@ import { formatDate, type Post } from "@/lib/content";
 export default function PostCard({ post }: { post: Post }) {
   return (
     <li>
-      <Link href={`/news/${post.slug}`} className="group flex gap-4">
+      <Link
+        href={`/news/${post.slug}`}
+        transitionTypes={["nav-forward"]}
+        className="group flex gap-4"
+      >
         <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-card bg-cream-2 tablet:h-32 tablet:w-32">
           {post.image && (
             <Image

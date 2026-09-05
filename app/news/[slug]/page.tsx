@@ -52,6 +52,7 @@ export default async function PostPage(props: PageProps<"/news/[slug]">) {
         <article className="mx-auto max-w-2xl px-1 py-4 tablet:px-4">
           <Link
             href="/news"
+            transitionTypes={["nav-back"]}
             className="inline-flex items-center gap-1 text-xs font-semibold text-cardinal hover:underline"
           >
             <ArrowRightIcon width={14} height={14} className="rotate-180" />

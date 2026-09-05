@@ -28,7 +28,7 @@ export default function SchedulePage() {
       }
     >
       <ContentCard>
-        <RuleHeading sub="Practices, NCCGA tournaments, tryouts, and socials. Add anything to your calendar with one click.">
+        <RuleHeading sub="2026–27 competitive calendar: Pacific regionals, Pinehurst Open, national qualifier, and nationals if we qualify. Men's section, Santa Clara, and Cal matches TBA.">
           Upcoming Events
         </RuleHeading>
 

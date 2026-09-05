@@ -43,6 +43,7 @@ export default function HeroCard({
       {showJoin && (
         <Link
           href="/membership"
+          transitionTypes={["nav-forward"]}
           className="absolute right-4 top-4 rounded-md border border-cardinal bg-cream px-4 py-2 font-heading text-sm font-semibold text-cardinal shadow-md shadow-black/20 transition hover:bg-cardinal hover:text-white tablet:right-5 tablet:top-5"
         >
           join us

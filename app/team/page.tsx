@@ -55,6 +55,7 @@ export default function TeamPage() {
             action={
               <Link
                 href="/schedule"
+                transitionTypes={["nav-forward"]}
                 className="inline-flex items-center gap-1 text-xs font-semibold text-cardinal hover:underline"
               >
                 Full schedule <ArrowRightIcon width={14} height={14} />
@@ -69,10 +70,15 @@ export default function TeamPage() {
               </p>
             )}
             <p className="mt-4 text-xs leading-relaxed text-ink-muted">
-              Want to play? Qualifying rounds happen at the start of each season.{" "}
-              <Link href="/membership" className="font-semibold text-cardinal hover:underline">
-                Sign up for tryouts.
+              Want to play? Tryouts run through the first three weeks of the year —{" "}
+              <Link
+                href="/tryouts"
+                transitionTypes={["nav-forward"]}
+                className="font-semibold text-cardinal hover:underline"
+              >
+                read the overview &amp; submit scores
               </Link>
+              .
             </p>
           </SubCard>
         </div>

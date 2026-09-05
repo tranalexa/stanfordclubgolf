@@ -9,7 +9,8 @@ Website for Stanford University's club golf team. Built with Next.js (App Router
 | `/` | Home: hero photo plus tiles linking to About, Membership, Competitive Team, Schedule |
 | `/about` | Testimonials, About Us, team photo, Our Story |
 | `/membership` | Join Us form (submits to Formspree) |
-| `/team` | Competitive roster, officers, upcoming tournaments |
+| `/tryouts` | Competitive tryouts overview + scorecard Google Form |
+| `/team` | Competitive roster and upcoming NCCGA tournaments |
 | `/schedule` | Upcoming and past events with Add-to-Calendar |
 | `/news`, `/news/[slug]` | News posts written in Markdown |
 | `/contact` | Practice times, contact info, socials, map |
