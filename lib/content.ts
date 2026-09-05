@@ -62,8 +62,24 @@ export type Roster = {
   players: Person[];
 };
 
+const YEAR_ORDER: Record<string, number> = {
+  Senior: 0,
+  "Masters'": 1,
+  Masters: 1,
+  Junior: 2,
+  Sophomore: 3,
+  Freshman: 4,
+};
+
 export function getRoster(): Roster {
-  return rosterData as Roster;
+  const roster = rosterData as Roster;
+  const players = [...roster.players].sort((a, b) => {
+    const ya = YEAR_ORDER[a.year] ?? 50;
+    const yb = YEAR_ORDER[b.year] ?? 50;
+    if (ya !== yb) return ya - yb;
+    return a.name.localeCompare(b.name);
+  });
+  return { ...roster, players };
 }
 
 /* ---------------------------------- Posts --------------------------------- */

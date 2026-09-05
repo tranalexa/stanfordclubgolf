@@ -9,6 +9,10 @@ function initials(name: string) {
     .join("");
 }
 
+function yearLabel(year: string) {
+  return /^\d{4}$/.test(year) ? `Class of ${year}` : year;
+}
+
 export default function RosterCard({ person }: { person: Person }) {
   return (
     <li className="flex items-center gap-3 rounded-card bg-cream p-3">
@@ -24,7 +28,8 @@ export default function RosterCard({ person }: { person: Person }) {
       <div className="min-w-0">
         <p className="truncate font-semibold leading-tight text-ink">{person.name}</p>
         <p className="text-xs text-ink-muted">
-          {person.role ? `${person.role} · ` : ""}Class of {person.year}
+          {person.role ? `${person.role} · ` : ""}
+          {yearLabel(person.year)}
           {person.hometown ? ` · ${person.hometown}` : ""}
         </p>
       </div>

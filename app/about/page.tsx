@@ -56,16 +56,18 @@ export default function AboutPage() {
             />
           </div>
 
-          <SubCard title="Leadership">
-            <p className="mb-4 text-sm leading-relaxed text-ink-muted">
-              Student officers who run practices, travel, and club life for the year.
-            </p>
-            <ul className="grid gap-2 tablet:grid-cols-2">
-              {roster.officers.map((p) => (
-                <RosterCard key={p.name} person={p} />
-              ))}
-            </ul>
-          </SubCard>
+          {roster.officers.length > 0 && (
+            <SubCard title="Leadership">
+              <p className="mb-4 text-sm leading-relaxed text-ink-muted">
+                Student officers who run practices, travel, and club life for the year.
+              </p>
+              <ul className="grid gap-2 tablet:grid-cols-2">
+                {roster.officers.map((p) => (
+                  <RosterCard key={p.name} person={p} />
+                ))}
+              </ul>
+            </SubCard>
+          )}
         </div>
       </ContentCard>
     </SplitLayout>

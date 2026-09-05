@@ -56,7 +56,7 @@ Everything below is a plain file edit followed by a commit. Vercel redeploys aut
 
 ### Roster and officers (Competitive Team page)
 
-`content/roster.json`. Update `season`, `blurb`, `officers`, and `players`. Add a `photo` field pointing at a file in `public/images/` to show a headshot instead of initials.
+`content/roster.json`. Update `season`, `blurb`, and `players`. Officers go in `officers` and appear on the About page when the array is non-empty. Add a `photo` field pointing at a file in `public/images/` to show a headshot instead of initials. Players are sorted Senior → Masters' → Junior → Sophomore, then A–Z.
 
 ### About page copy
 
