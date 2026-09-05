@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fbf6ec;
+  --color-cream-2: #f4eadb;
+  --color-cream-3: #ede0cc;
+  --color-cardinal: #8c1515;
+  --color-cardinal-dark: #6b0f0f;
+  --color-cardinal-light: #b83a2e;
+  --color-ink: #2e2d29;
+  --color-ink-muted: #6f6c64;
+  --color-fairway: #1f7a3a;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), "Georgia", serif;
+  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 14px;
+  --radius-panel: 18px;
+
+  --breakpoint-tablet: 810px;
+  --breakpoint-desktop: 1200px;
+}
+
+html {
+  background: var(--color-cream);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Big retro title on hero image cards */
+.hero-title {
+  font-family: var(--font-display);
+  color: #fff;
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  text-shadow:
+    0 0 1px var(--color-cardinal),
+    1px 1px 0 var(--color-cardinal),
+    -1px -1px 0 var(--color-cardinal),
+    1px -1px 0 var(--color-cardinal),
+    -1px 1px 0 var(--color-cardinal),
+    0 4px 14px rgba(60, 10, 10, 0.55);
+}
+
+/* Section heading in the mockup's chunky rounded style */
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-cardinal);
+  letter-spacing: -0.01em;
+}
+
+/* Serrated "postage stamp" edge */
+.stamp {
+  --tooth: 14px;
+  padding: calc(var(--tooth) / 2);
+  background: #fff;
+  -webkit-mask:
+    radial-gradient(
+        circle at 50% 0,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      50% 0 / var(--tooth) 100% repeat-x,
+    radial-gradient(
+        circle at 50% 100%,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      50% 100% / var(--tooth) 100% repeat-x,
+    radial-gradient(
+        circle at 0 50%,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      0 50% / 100% var(--tooth) repeat-y,
+    radial-gradient(
+        circle at 100% 50%,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      100% 50% / 100% var(--tooth) repeat-y;
+  -webkit-mask-composite: source-in;
+  mask:
+    radial-gradient(
+        circle at 50% 0,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      50% 0 / var(--tooth) 100% repeat-x,
+    radial-gradient(
+        circle at 50% 100%,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      50% 100% / var(--tooth) 100% repeat-x,
+    radial-gradient(
+        circle at 0 50%,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      0 50% / 100% var(--tooth) repeat-y,
+    radial-gradient(
+        circle at 100% 50%,
+        transparent calc(var(--tooth) * 0.42),
+        #000 calc(var(--tooth) * 0.44)
+      )
+      100% 50% / 100% var(--tooth) repeat-y;
+  mask-composite: intersect;
+}
+
+/* Thin decorative rule with arrow ends, used around centered headings */
+.rule-arrows {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-cardinal);
+}
+.rule-arrows::before,
+.rule-arrows::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+/* Markdown post body */
+.prose-club {
+  color: var(--color-ink);
+  line-height: 1.7;
+}
+.prose-club p {
+  margin: 0 0 1em;
+}
+.prose-club h2,
+.prose-club h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-cardinal);
+  margin: 1.6em 0 0.5em;
+  line-height: 1.2;
+}
+.prose-club h2 {
+  font-size: 1.5rem;
+}
+.prose-club h3 {
+  font-size: 1.2rem;
+}
+.prose-club ul,
+.prose-club ol {
+  padding-left: 1.4em;
+  margin: 0 0 1em;
+}
+.prose-club ul {
+  list-style: disc;
+}
+.prose-club ol {
+  list-style: decimal;
+}
+.prose-club a {
+  color: var(--color-cardinal);
+  text-decoration: underline;
+}
+.prose-club blockquote {
+  border-left: 3px solid var(--color-cardinal);
+  padding-left: 1em;
+  color: var(--color-ink-muted);
+  margin: 0 0 1em;
+}
+.prose-club strong {
+  font-weight: 700;
+}

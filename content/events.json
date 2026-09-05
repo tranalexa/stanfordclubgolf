@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fall-2026-tryouts",
+    "title": "Fall Tryouts",
+    "date": "2026-09-19T09:00:00-07:00",
+    "endDate": "2026-09-19T14:00:00-07:00",
+    "location": "Stanford Golf Course",
+    "type": "tryout",
+    "description": "18-hole qualifying round for the competitive travel roster. All members welcome to play; bring your own clubs."
+  },
+  {
+    "id": "nccga-regional-1-fall-2026",
+    "title": "NCCGA Regional #1",
+    "date": "2026-10-03T08:00:00-07:00",
+    "endDate": "2026-10-04T17:00:00-07:00",
+    "location": "Poppy Hills Golf Course, Pebble Beach, CA",
+    "type": "tournament",
+    "description": "First regional tournament of the fall season. Two-day, 36-hole stroke play."
+  },
+  {
+    "id": "fall-2026-social-topgolf",
+    "title": "Team Social: Topgolf",
+    "date": "2026-10-16T19:00:00-07:00",
+    "endDate": "2026-10-16T22:00:00-07:00",
+    "location": "Topgolf San Jose",
+    "type": "social",
+    "description": "Casual night out for the whole club. Non-members welcome as guests."
+  },
+  {
+    "id": "nccga-regional-2-fall-2026",
+    "title": "NCCGA Regional #2",
+    "date": "2026-10-24T08:00:00-07:00",
+    "endDate": "2026-10-25T17:00:00-07:00",
+    "location": "Coyote Creek Golf Club, Morgan Hill, CA",
+    "type": "tournament",
+    "description": "Second regional tournament. Top finishers qualify for the NCCGA National Championship."
+  },
+  {
+    "id": "nccga-nationals-fall-2025",
+    "title": "NCCGA National Championship",
+    "date": "2025-12-07T08:00:00-05:00",
+    "endDate": "2025-12-08T17:00:00-05:00",
+    "location": "Pinehurst Resort, Pinehurst, NC",
+    "type": "tournament",
+    "description": "Stanford Club Golf represented the Pacific region at the fall national finals."
+  }
+]

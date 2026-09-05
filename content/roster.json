@@ -1,0 +1,20 @@
+{
+  "season": "Fall 2026",
+  "blurb": "The competitive team travels to NCCGA regional tournaments each fall and spring. Spots are earned through open qualifying rounds at the start of every season, so every member has a shot.",
+  "officers": [
+    { "name": "Alex Tran", "role": "President", "year": "2027", "hometown": "San Jose, CA" },
+    { "name": "Jordan Lee", "role": "Vice President", "year": "2027", "hometown": "Seattle, WA" },
+    { "name": "Priya Nair", "role": "Treasurer", "year": "2028", "hometown": "Austin, TX" },
+    { "name": "Marcus Hill", "role": "Tournament Director", "year": "2026", "hometown": "Atlanta, GA" }
+  ],
+  "players": [
+    { "name": "Alex Tran", "year": "2027", "hometown": "San Jose, CA" },
+    { "name": "Jordan Lee", "year": "2027", "hometown": "Seattle, WA" },
+    { "name": "Priya Nair", "year": "2028", "hometown": "Austin, TX" },
+    { "name": "Marcus Hill", "year": "2026", "hometown": "Atlanta, GA" },
+    { "name": "Sofia Ramirez", "year": "2029", "hometown": "Scottsdale, AZ" },
+    { "name": "Ethan Park", "year": "2028", "hometown": "Irvine, CA" },
+    { "name": "Grace Chen", "year": "2027", "hometown": "Portland, OR" },
+    { "name": "Daniel Okafor", "year": "2029", "hometown": "Houston, TX" }
+  ]
+}
