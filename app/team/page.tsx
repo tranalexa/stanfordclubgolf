@@ -50,41 +50,31 @@ export default function TeamPage() {
             </ul>
           </SubCard>
 
-          <div className="grid gap-4 tablet:grid-cols-2">
-            <SubCard title="Officers">
-              <ul className="grid gap-2">
-                {roster.officers.map((p) => (
-                  <RosterCard key={p.name} person={p} />
-                ))}
-              </ul>
-            </SubCard>
-
-            <SubCard
-              title="Tournaments"
-              action={
-                <Link
-                  href="/schedule"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-cardinal hover:underline"
-                >
-                  Full schedule <ArrowRightIcon width={14} height={14} />
-                </Link>
-              }
-            >
-              {tournaments.length ? (
-                <EventList events={tournaments} showCalendar={false} compact />
-              ) : (
-                <p className="text-sm text-ink-muted">
-                  No tournaments scheduled yet. Check back soon.
-                </p>
-              )}
-              <p className="mt-4 text-xs leading-relaxed text-ink-muted">
-                Want to play? Qualifying rounds happen at the start of each season.{" "}
-                <Link href="/membership" className="font-semibold text-cardinal hover:underline">
-                  Sign up for tryouts.
-                </Link>
+          <SubCard
+            title="Tournaments"
+            action={
+              <Link
+                href="/schedule"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-cardinal hover:underline"
+              >
+                Full schedule <ArrowRightIcon width={14} height={14} />
+              </Link>
+            }
+          >
+            {tournaments.length ? (
+              <EventList events={tournaments} showCalendar={false} compact />
+            ) : (
+              <p className="text-sm text-ink-muted">
+                No tournaments scheduled yet. Check back soon.
               </p>
-            </SubCard>
-          </div>
+            )}
+            <p className="mt-4 text-xs leading-relaxed text-ink-muted">
+              Want to play? Qualifying rounds happen at the start of each season.{" "}
+              <Link href="/membership" className="font-semibold text-cardinal hover:underline">
+                Sign up for tryouts.
+              </Link>
+            </p>
+          </SubCard>
         </div>
       </ContentCard>
     </SplitLayout>

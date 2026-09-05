@@ -18,7 +18,7 @@ export const site = {
   },
 
   socials: {
-    instagram: "https://instagram.com/stanfordclubgolf",
+    instagram: "https://instagram.com/stanfordgolfclub",
     x: "https://x.com/stanfordclubgolf",
     facebook: "",
     email: "mailto:stanfordclubgolf@stanford.edu",

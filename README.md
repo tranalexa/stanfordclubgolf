@@ -59,7 +59,7 @@ Everything below is a plain file edit followed by a commit. Vercel redeploys aut
 
 ### About page copy
 
-`content/about.ts`. Paragraphs for About Us and Our Story, plus testimonials.
+`content/about.ts`. Paragraphs for About Us and Our Story. Officers / leadership are edited in `content/roster.json` (`officers` array) and shown on the About page.
 
 ### News posts
 

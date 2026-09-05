@@ -17,6 +17,8 @@ export type ClubEvent = {
   location: string;
   type: EventType;
   description?: string;
+  /** Optional Partiful invite URL (https://partiful.com/e/...). Socials use this for RSVP. */
+  partifulUrl?: string;
 };
 
 const events = eventsData as ClubEvent[];

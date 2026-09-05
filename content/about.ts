@@ -1,5 +1,6 @@
 /**
  * Copy for the About page. Edit freely.
+ * Officers live in content/roster.json (officers array).
  */
 export const about = {
   aboutUs: [
@@ -9,20 +10,6 @@ export const about = {
   ourStory: [
     "The club started as a handful of students sharing tee times and carpooling to public courses around the Bay Area. As interest grew, we organized into an official student group, secured practice time at Stanford Golf Course, and joined the NCCGA.",
     "Today the club has dozens of active members, sends a travel team to regional tournaments every semester, and has represented the Pacific region at the NCCGA National Championship.",
-  ],
-  testimonials: [
-    {
-      name: "Grace C.",
-      quote:
-        "I hadn't touched a club since high school. Within a quarter I was playing in tournaments and had a whole new friend group.",
-      rating: 5,
-    },
-    {
-      name: "Ethan P.",
-      quote:
-        "The competitive side is real, but nobody takes themselves too seriously. Best of both worlds.",
-      rating: 5,
-    },
   ],
   teamPhoto: "/images/about-team.jpg",
 };
